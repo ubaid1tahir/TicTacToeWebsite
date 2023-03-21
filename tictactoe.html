@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            background-color: black;
+            height: 35px;
+            padding: 15px;
+            padding-bottom: 18px;
+
+        }
+        .container{
+            display: flex;
+        }
+
+        .turn{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(203, 203, 203);
+            color: black;
+            margin-bottom: 10px;
+            padding-top: 80px;
+        }
+
+        #_name {
+            color: white;
+            font-family: Arial;
+            font-size: 25px;
+        }
+
+        #_logo {
+            width: 40px;
+            height: 40px;
+        }
+        #name{
+            margin-top: 7px;
+            margin-left: 9px;
+        }
+        #playagain{
+            width: 80px;
+            height: 50px;
+            margin-left: 80%;
+            font-family: Arial;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: rgb(144, 255, 144);
+            color: black;
+            border-radius: 5px;
+            border-style: none;
+        }
+        #maincontainer{
+            margin: 20px;
+        }
+        .turn-firstrow{
+            display: flex;
+        }
+        .innercontainer{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(203, 203, 203);
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        #Xturn,#Oturn{
+            margin-left: 40px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+        }
+        
+        #Oturn{
+            margin-left: 20px;
+        }
+        .innercontainer:hover{
+            box-shadow: 1px 2px rgb(112, 112, 112);
+            height: 203px;
+            width: 203px;
+            
+        }
+        .item{
+            font-family: Arial;
+            position: relative;
+            top: 39%;
+            left: 39%;
+            font-size: 50px;
+        }
+        .firstrow,.secondrow,.thirdrow{
+            display: flex;
+            margin-left: 400px;
+        }
+        .firstrow{
+            margin-left: 200px;
+        }
+        .innercontainer{
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .success{
+            background-color: rgb(96, 255, 96);
+            width: 100%;
+        }
+        #message{
+            font-size:45px;
+            color: white;
+            margin-left: 45%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div id="logo">
+                <img id="_logo" src="logo.jpg" alt="Logo">
+            </div>
+            <div id="name">
+                <span id="_name">TicTacToe</span>
+            </div>
+            <button onclick="Replay()" id="playagain">Play Again</button>
+        </div>
+    </nav>
+    <div class="success">
+        <p id="message"></p>
+    </div>
+    <div id="maincontainer">
+        <div class="turn-firstrow">
+            <div class="turn">
+                <span id="Xturn">X`s turn</span>
+                <span id="Oturn">O`s turn</span>
+            </div>
+    
+            <div class="firstrow">
+                <div onclick="Select1()" class="innercontainer" id="box1">
+                    <span class="item" id="item1"></span>
+                </div>
+                <div onclick="Select2()" class="innercontainer" id="box2">
+                    <span class="item" id="item2"></span>
+                </div>
+                <div onclick="Select3()" class="innercontainer" id="box3">
+                    <span class="item" id="item3"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="secondrow">
+            <div onclick="Select4()" class="innercontainer" id="box4">
+                <span class="item" id="item4"></span>
+            </div>
+            <div onclick="Select5()" class="innercontainer" id="box5">
+                <span id="item5" class="item"></span>
+            </div>
+            <div onclick="Select6()" class="innercontainer" id="box6">
+                <span id="item6" class="item"></span>
+            </div>
+        </div>
+        <div class="thirdrow">
+            <div onclick="Select7()" class="innercontainer" id="box7">
+                <span id="item7" class="item"></span>
+            </div>
+            <div onclick="Select8()" class="innercontainer" id="box8">
+                <span class="item" id="item8"></span>
+            </div>
+            <div onclick="Select9()" class="innercontainer" id="box9">
+                <span class="item" id="item9"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+
+</html>
